@@ -9,12 +9,13 @@ export default function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      { expenses.map(element => 
-          <ExpenseItem title={element.title}
-                       amount={element.amount}
-                       date={element.date} />
-        )
-      }
+      {expenses.map((element) => (
+        <ExpenseItem
+          title={element.title}
+          amount={element.amount}
+          date={element.date}
+        />
+      ))}
     </div>
   );
 }
