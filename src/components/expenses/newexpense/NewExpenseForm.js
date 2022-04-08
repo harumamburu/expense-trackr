@@ -1,8 +1,7 @@
-import "./NewExpenseForm.css";
+import { useState } from "react";
 
 import NewExpenseControl from "./NewExpenseControl";
-
-import { useState } from "react";
+import "./NewExpenseForm.css";
 
 const NewExpenseForm = props => {
   const [title, setTitle] = useState("");
