@@ -3,10 +3,12 @@ import "./NewExpense.css";
 import Card from "../../common/Card";
 import NewExpenseForm from "./NewExpenseForm";
 
-const NewExpense = () => {
+const NewExpense = (props) => {
+  const submitExpenseDataHandler = newExpenseData => props.onNewExpense(newExpenseData);
+
   return (
     <Card className="new-expense">
-      <NewExpenseForm />
+      <NewExpenseForm onSubmitExpenseData={submitExpenseDataHandler} />
     </Card>
   );
 };

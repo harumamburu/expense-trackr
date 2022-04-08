@@ -4,7 +4,7 @@ import NewExpenseControl from "./NewExpenseControl";
 
 import { useState } from "react";
 
-const NewExpenseForm = () => {
+const NewExpenseForm = props => {
   const [title, setTitle] = useState("");
   const titleChangeHandler = event => setTitle(event.target.value);
   const [amount, setAmount] = useState("");
@@ -17,8 +17,9 @@ const NewExpenseForm = () => {
     const newExpenseData = {
       title: title,
       amount: amount,
-      date: new Date(date),
+      date: new Date(date)
     };
+    props.onSubmitExpenseData(newExpenseData);
     setTitle("");
     setAmount("");
     setDate("");
