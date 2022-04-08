@@ -5,11 +5,11 @@ import ExpenseItem from "./ExpenseItem";
 export default function ExpensesList(props) {
   return (
     <div className="expenses">
-      {props.expenses.map(element =>
+      {props.expenses.map(expense =>
         <ExpenseItem
-          title={element.title}
-          amount={element.amount}
-          date={element.date}
+          title={expense.title}
+          amount={expense.amount}
+          date={expense.date}
         />
       )}
     </div>
