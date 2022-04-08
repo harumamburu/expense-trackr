@@ -1,4 +1,4 @@
-import ExpensesList from "./components/ExpensesList";
+import ExpensesList from "./components/expenses/ExpensesList";
 
 export default function App() {
   const expenses = [
