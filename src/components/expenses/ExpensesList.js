@@ -17,4 +17,5 @@ const ExpensesList = (props) => {
     </Card>
   );
 };
+
 export default ExpensesList;

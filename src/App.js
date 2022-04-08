@@ -1,6 +1,6 @@
 import ExpensesList from "./components/expenses/ExpensesList";
 
-export default function App() {
+const App = () => {
   const expenses = [
     { title: "React text book", amount: "$20", date: new Date(2021, 11, 30) },
     { title: "MacBook", amount: "$100500", date: new Date(2022, 2, 30) },
@@ -14,4 +14,6 @@ export default function App() {
       <ExpensesList expenses={expenses} />
     </div>
   );
-}
+};
+
+export default App;
