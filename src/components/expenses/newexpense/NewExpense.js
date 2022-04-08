@@ -1,12 +1,12 @@
 import "./NewExpense.css";
 
 import Card from "../../common/Card";
-import ExpenseForm from "./ExpenseForm";
+import NewExpenseForm from "./NewExpenseForm";
 
 const NewExpense = () => {
   return (
     <Card className="new-expense">
-      <ExpenseForm />
+      <NewExpenseForm />
     </Card>
   );
 };
