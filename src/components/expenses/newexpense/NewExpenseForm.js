@@ -12,15 +12,28 @@ const NewExpenseForm = () => {
   const [date, setDate] = useState("");
   const dateChangeHandler = event => setDate(event.target.value);
 
+  const submitHandler = event => {
+    event.preventDefault();
+    const newExpenseData = {
+      title: title,
+      amount: amount,
+      date: new Date(date),
+    };
+    setTitle("");
+    setAmount("");
+    setDate("");
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <NewExpenseControl label="Title">
-          <input type="text" onChange={titleChangeHandler} />
+          <input type="text" value={title} onChange={titleChangeHandler} />
         </NewExpenseControl>
         <NewExpenseControl label="Amount">
           <input
             type="nubmer"
+            value={amount}
             min="0.01"
             step="0.01"
             onChange={amountChangeHandler}
@@ -29,6 +42,7 @@ const NewExpenseForm = () => {
         <NewExpenseControl label="Date">
           <input
             type="date"
+            value={date}
             min="2019-01-01"
             max="2022-12-31"
             onChange={dateChangeHandler}
