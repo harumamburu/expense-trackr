@@ -27,7 +27,7 @@ const NewExpenseForm = props => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} onReset={props.onCancelEditing}>
       <div className="new-expense__controls">
         <NewExpenseControl label="Title">
           <input type="text" value={title} onChange={titleChangeHandler} />
@@ -52,6 +52,7 @@ const NewExpenseForm = props => {
         </NewExpenseControl>
       </div>
       <div className="new-expense__actions">
+        <button type="reset">Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
