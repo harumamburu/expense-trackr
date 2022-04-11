@@ -19,9 +19,9 @@ const ExpensesList = props => {
             : true
         )
         .sort((a, b) => new Date(a.date) - new Date(b.date))
-        .map((expense, index) =>
+        .map(expense =>
           <ExpenseItem
-            key={index}
+            key={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}

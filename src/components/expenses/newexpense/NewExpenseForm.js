@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuid } from "uuid";
 
 import NewExpenseControl from "./NewExpenseControl";
 import "./NewExpenseForm.css";
@@ -14,6 +15,7 @@ const NewExpenseForm = props => {
   const submitHandler = event => {
     event.preventDefault();
     const newExpenseData = {
+      id: uuid(),
       title: title,
       amount: amount,
       date: new Date(date)
