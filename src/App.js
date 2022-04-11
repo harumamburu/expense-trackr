@@ -7,20 +7,20 @@ const INIT_DATA = [
   {
     id: "e1",
     title: "React text book",
-    amount: "$20",
+    amount: "20",
     date: new Date(2021, 11, 30),
   },
   {
     id: "e2",
     title: "MacBook",
-    amount: "$100500",
+    amount: "1500",
     date: new Date(2022, 2, 30),
   },
-  { id: "e3", title: "Wape thingy", amount: "$15", date: new Date(2022, 3, 5) },
+  { id: "e3", title: "Wape thingy", amount: "45", date: new Date(2022, 3, 5) },
   {
     id: "e4",
     title: "Checked shirt",
-    amount: "$105",
+    amount: "115",
     date: new Date(2022, 3, 6),
   }
 ];
