@@ -2,7 +2,7 @@ import { useState } from "react";
 import { v4 as uuid } from "uuid";
 
 import NewExpenseControl from "./NewExpenseControl";
-import "./NewExpenseForm.css";
+import styles from "./NewExpenseForm.module.css";
 
 const NewExpenseForm = props => {
   const [title, setTitle] = useState("");
@@ -25,7 +25,7 @@ const NewExpenseForm = props => {
 
   return (
     <form onSubmit={submitHandler} onReset={props.onCancelEditing}>
-      <div className="new-expense__controls">
+      <div className={styles["new-expense__controls"]}>
         <NewExpenseControl label="Title">
           <input
             type="text"
@@ -52,7 +52,7 @@ const NewExpenseForm = props => {
           />
         </NewExpenseControl>
       </div>
-      <div className="new-expense__actions">
+      <div className={styles["new-expense__actions"]}>
         <button type="reset">Cancel</button>
         <button type="submit">Add Expense</button>
       </div>

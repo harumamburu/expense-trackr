@@ -4,7 +4,7 @@ import Card from "../common/Card";
 import ExpensesChart from "./ExpensesChart";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
-import "./Expenses.css";
+import styles from "./Expenses.module.css";
 
 const Expenses = props => {
   const [filterYear, setFilterYear] = useState("");
@@ -17,7 +17,7 @@ const Expenses = props => {
     .sort((a, b) => new Date(a.date) - new Date(b.date));
 
   return (
-    <Card className="expenses">
+    <Card className={styles["expenses"]}>
       <ExpensesFilter
         selected={filterYear}
         onFilterChange={dateFilterChangeHandler}

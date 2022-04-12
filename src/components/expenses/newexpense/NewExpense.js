@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Card from "../../common/Card";
 import NewExpenseForm from "./NewExpenseForm";
-import "./NewExpense.css";
+import styles from "./NewExpense.module.css";
 
 const NewExpense = props => {
   const [isEditing, setIsEditing] = useState(false);
@@ -13,7 +13,7 @@ const NewExpense = props => {
   };
 
   return (
-    <Card className="new-expense">
+    <Card className={styles["new-expense"]}>
       {isEditing ?
         <NewExpenseForm
           onSubmitExpenseData={submitExpenseDataHandler}

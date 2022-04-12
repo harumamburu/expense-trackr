@@ -1,13 +1,13 @@
 import ExpenseItem from "./ExpenseItem";
-import "./ExpensesList.css";
+import styles from "./ExpensesList.module.css";
 
 const ExpensesList = props => {
   return (
     <div>
       {props.expenses.length === 0 ?
-        <h2 className="expenses-list__fallback">No expenses found.</h2>
+        <h2 className={styles["expenses-list__fallback"]}>No expenses found.</h2>
       :
-        <ul className="expenses-list">
+        <ul className={styles["expenses-list"]}>
           {props.expenses.map(expense => (
             <ExpenseItem key={expense.id} expense={expense} />
           ))}

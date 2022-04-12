@@ -1,11 +1,11 @@
 import ChartBar from "./ChartBar";
-import "./Chart.css";
+import styles from "./Chart.module.css";
 
 const Chart = props => {
   const maxValue = Math.max(...props.data.map(item => item.value));
 
   return (
-    <div className="chart">
+    <div className={styles["chart"]}>
       {props.data.map((item, index) =>
         <ChartBar
           key={index}
